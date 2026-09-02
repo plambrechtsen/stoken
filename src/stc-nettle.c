@@ -35,7 +35,8 @@
 #include <nettle/cbc.h>
 #include <nettle/hmac.h>
 #include <nettle/rsa.h>
-#include <nettle/sha.h>
+#include <nettle/sha1.h>
+#include <nettle/sha2.h>
 
 #include "stoken-internal.h"
 
@@ -93,7 +94,7 @@ void stc_sha1_hash(uint8_t *out, ...)
 		sha1_update(&md, in_len, in);
 	}
 	va_end(ap);
-	sha1_digest(&md, SHA1_DIGEST_SIZE, out);
+	sha1_digest(&md, out);
 }
 
 void stc_sha256_hash(uint8_t *out, ...)
@@ -113,7 +114,7 @@ void stc_sha256_hash(uint8_t *out, ...)
 		sha256_update(&md, in_len, in);
 	}
 	va_end(ap);
-	sha256_digest(&md, SHA256_DIGEST_SIZE, out);
+	sha256_digest(&md, out);
 }
 
 int stc_b64_encode(const uint8_t *in,  unsigned long len,
