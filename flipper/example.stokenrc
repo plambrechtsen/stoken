@@ -1,0 +1,19 @@
+# Example token file for the Flipper Zero stoken app.
+# Copy to /ext/stoken/<anything>.stokenrc on the SD card.
+#
+# This uses the public stoken test-suite token, so the codes are not
+# useful for logging in to anything; replace "token" with your own.
+
+version 1
+nickname Example token
+token 258491750817210752367175001073261277346642631755724762324173166222072472716737543
+
+# Token PIN, only used by PIN-mode software tokens (merged into the code
+# exactly like "stoken tokencode --pin"). Not the same as the static PIN
+# in the app's Settings, which is typed in front of the code over USB.
+pin 9999
+
+# Only needed if the token was imported with a password / is bound to a
+# device ID:
+# password my-token-password
+# devid 0123456789ABCDEF

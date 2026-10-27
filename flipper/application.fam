@@ -1,0 +1,15 @@
+App(
+    appid="stoken",
+    name="RSA SecurID",
+    apptype=FlipperAppType.EXTERNAL,
+    entry_point="stoken_app",
+    requires=["gui", "storage", "notification"],
+    fap_libs=["mbedtls"],
+    stack_size=8 * 1024,
+    fap_category="Tools",
+    fap_icon="stoken_10px.png",
+    fap_version="0.1",
+    fap_author="stoken contributors",
+    fap_description="RSA SecurID software token (port of stoken) with multiple tokens, UTC offset and USB keyboard typing",
+    fap_weburl="https://github.com/stoken-dev/stoken",
+)
